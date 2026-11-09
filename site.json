@@ -15,7 +15,7 @@
     "form": {
       "_doc": "Contact form, shown when both are set. endpoint = the contact Worker URL (worker/contact), turnstile_sitekey = the public Turnstile site key.",
       "endpoint": "",
-      "turnstile_sitekey": ""
+      "turnstile_sitekey": "0x4AAAAAAF5zjyASUBGhfJ5C"
     }
   },
   "site_url": "https://alexpeixoto.github.io/Glowfingames",
