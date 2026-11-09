@@ -233,9 +233,15 @@ def build_game(site, game):
         for s in game["screenshots"])
     trailer = ""
     if game.get("trailer_youtube_id"):
+        # Click to play: the page shows a poster served from this site and only contacts
+        # YouTube (privacy-enhanced youtube-nocookie.com) once the visitor presses play.
         yid = esc(game["trailer_youtube_id"])
+        title = esc(game["title"])
+        poster = game.get("trailer_poster", "")
+        img = (f'<img src="{esc(poster)}" alt="{title} trailer" loading="lazy" width="1280" height="720">'
+               if poster else "")
         trailer = f"""<section class="section"><div class="wrap"><p class="kicker">Trailer</p><h2>See it move</h2>
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{yid}" title="{esc(game['title'])} trailer" loading="lazy" allowfullscreen></iframe></div></div></section>"""
+<div class="video"><a class="video-facade" href="https://www.youtube.com/watch?v={yid}" data-youtube="{yid}" data-title="{title} trailer" aria-label="Play the {title} trailer">{img}<span class="play" aria-hidden="true"></span><span class="video-note">Plays from YouTube</span></a></div></div></section>"""
     privacy = ""
     if game.get("privacy"):
         privacy = f'<p class="small-links"><a href="privacy/index.html">Privacy policy</a> · <a href="{root}legal/index.html#{gid}">Credits</a></p>'
@@ -339,7 +345,10 @@ def site_privacy(site):
                  "(<a href=\"https://www.cloudflare.com/privacypolicy/\">Cloudflare privacy policy</a>). "
                  "Ask us any time to delete your messages.</p>")
     else:
-        text += "<p>Nothing is loaded from other servers.</p>"
+        text += "<p>Nothing is loaded from other servers unless you play a trailer.</p>"
+    text += ("<p><strong>Trailers.</strong> A game page shows its trailer as a picture from this site. Only when you press "
+             "play does the video load from YouTube in its privacy-enhanced mode "
+             "(<a href=\"https://policies.google.com/privacy\">Google privacy policy</a>).</p>")
     return text
 
 

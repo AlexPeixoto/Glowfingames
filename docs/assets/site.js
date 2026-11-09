@@ -73,3 +73,18 @@
     button.disabled = false;
   });
 })();
+
+// Trailer: swap the poster for the YouTube player (privacy-enhanced) only when pressed.
+(function () {
+  document.querySelectorAll("a[data-youtube]").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(a.dataset.youtube) + "?autoplay=1&rel=0";
+      f.title = a.dataset.title || "Trailer";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      a.replaceWith(f);
+    });
+  });
+})();

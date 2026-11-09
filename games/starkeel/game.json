@@ -39,7 +39,8 @@
     {"src": "media/phone-07_modes.webp", "alt": "Endless, Gauntlet, Boss Rush and more modes"},
     {"src": "media/phone-08_free_to_try.webp", "alt": "Free to try, one purchase unlocks the full game"}
   ],
-  "trailer_youtube_id": "",
+  "trailer_youtube_id": "iJNhdIsh9tw",
+  "trailer_poster": "media/trailer.webp",
   "stores": [
     {"store": "google_play", "url": "https://play.google.com/store/apps/details?id=com.alexpeixoto.starkeel", "live": false}
   ],
