@@ -3,7 +3,7 @@
 Read README.md first. Rules:
 
 - Content lives in JSON (`site.json`, `games/<id>/game.json`). Do not hand-edit `docs/`: change the source and run `python3 build.py`. Commit the source **and** the rebuilt `docs/` together.
-- Python standard library only in `build.py`. No npm, no framework, no CDN, no analytics, no cookies, nothing fetched from other servers (the Legal page promises this). Any new font or third-party file goes in the "This website" table in `build_legal()`.
+- Python standard library only in `build.py`. No npm, no framework, no CDN, no analytics, no cookies, nothing fetched from other servers except Cloudflare Turnstile on the home page when the contact form is on (the Legal page says exactly this). Any new font or third-party file goes in the "This website" table in `build_legal()`.
 - Keep images light: WebP, screenshots about 540x960 (portrait) or 1280x720 (landscape), under ~100 KB each.
 - After any change, check the pages at phone width (390 px) and desktop (1440 px): no sideways scroll, nothing clipped. Post screenshots to Alex.
 
@@ -44,4 +44,5 @@ Read README.md first. Rules:
 
 - **A store page goes live**: set that store's `live` to `true` (check the `url`), update `status`, rebuild.
 - **Contact email chosen**: set `contact.email` in `site.json` (the GitHub link is only the fallback).
+- **Contact form**: off until `contact.form` in `site.json` is filled in; setup steps in worker/contact/README.md.
 - **STARKEEL privacy policy changes**: it also exists in the AndroidProto repo at `publishing/privacy/index.html` (hosted at alexpeixoto.github.io/starkeel-privacy, the URL in Play Console). Keep all three in sync, with the same date.

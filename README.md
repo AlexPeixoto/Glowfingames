@@ -17,6 +17,7 @@ Open `docs/index.html` in a browser to check it. All links are relative, so it w
 | `games/<id>/media/` | That game's images (icon, banner, hero, screenshots), copied as-is |
 | `games/<id>/privacy.html` | That game's privacy policy body (HTML fragment) |
 | `assets/` | Shared CSS, JS, fonts (self-hosted Inter + Silkscreen, OFL) and the logo |
+| `worker/contact/` | Cloudflare Worker behind the contact form (off until set up; see its README) |
 | `build.py` | The generator: page templates live in it as Python functions |
 | `docs/` | Build output. Committed, so a static host can serve it directly. Never edit by hand |
 

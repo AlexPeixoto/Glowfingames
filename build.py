@@ -86,7 +86,7 @@ def store_buttons(game, root):
     return "\n".join(out)
 
 
-def page(site, root, title, description, body, active=""):
+def page(site, root, title, description, body, active="", head=""):
     def nav(href, label, key):
         cur = ' aria-current="page"' if key == active else ""
         return f'<a href="{root}{href}"{cur}>{label}</a>'
@@ -105,7 +105,7 @@ def page(site, root, title, description, body, active=""):
 <link rel="icon" type="image/png" href="{root}assets/brand/favicon.png">
 <link rel="apple-touch-icon" href="{root}assets/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="{root}assets/site.css">
-</head>
+{head}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
@@ -130,14 +130,34 @@ def page(site, root, title, description, body, active=""):
 """
 
 
+def form_on(site):
+    f = site["contact"].get("form", {})
+    return bool(f.get("endpoint") and f.get("turnstile_sitekey"))
+
+
 def contact_block(site):
     c = site["contact"]
     if c.get("email"):
         action = f'<a class="btn" href="mailto:{esc(c["email"])}">{esc(c["email"])}</a>'
     else:
         action = f'<a class="btn" href="{esc(c["fallback_url"])}" rel="noopener">{esc(c["fallback_label"])}</a>'
+    if form_on(site):
+        f = c["form"]
+        alt = f'<p class="form-alt">Or email <a href="mailto:{esc(c["email"])}">{esc(c["email"])}</a></p>' if c.get("email") else ""
+        action = f"""<form class="contact-form" action="{esc(f['endpoint'])}" method="post" data-contact>
+  <div class="two">
+    <label>Name<input name="name" autocomplete="name" maxlength="100"></label>
+    <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+  </div>
+  <label>Subject<input name="subject" maxlength="150"></label>
+  <label>Message<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+  <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+  <div class="cf-turnstile" data-sitekey="{esc(f['turnstile_sitekey'])}" data-theme="dark"></div>
+  <div class="row"><button class="btn" type="submit">Send message</button><p class="form-status" role="status" aria-live="polite"></p></div>
+  {alt}
+</form>"""
     return f"""<section id="contact" class="section contact">
-  <div class="wrap contact-in">
+  <div class="wrap contact-in{' has-form' if form_on(site) else ''}">
     <div>
       <p class="kicker">Contact</p>
       <h2>Say hello</h2>
@@ -195,7 +215,9 @@ def build_home(site, games):
   </div>
 </section>
 {contact_block(site)}"""
-    write("index.html", page(site, root, site["name"], site["intro"], body))
+    head = ('<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>\n'
+            if form_on(site) else "")
+    write("index.html", page(site, root, site["name"], site["intro"], body, head=head))
 
 
 def build_game(site, game):
@@ -295,7 +317,7 @@ def build_legal(site, games):
 <nav class="toc">{" ".join(f'<a href="#{g["id"]}">{esc(g["title"])}</a>' for g in games)}<a href="#website">This website</a></nav>
 {games_html}
 <h2 id="website">This website</h2>
-<p><strong>Privacy.</strong> This site sets no cookies, runs no analytics or ads and loads nothing from other servers. Fonts and images are served from this site. Links to stores and other sites follow those sites' own policies.</p>
+{site_privacy(site)}
 <div class="table"><table><thead><tr><th>What</th><th>By</th><th>Licence</th></tr></thead><tbody>
 <tr><td>Font: Inter</td><td>Rasmus Andersson, The Inter Project</td><td>SIL Open Font License 1.1</td></tr>
 <tr><td>Font: Silkscreen</td><td>Jason Kottke</td><td>SIL Open Font License 1.1</td></tr>
@@ -305,6 +327,20 @@ def build_legal(site, games):
 </div></section>"""
     write("legal/index.html", page(site, root, "Licences, credits & privacy",
                                    f"Licences, credits and privacy policies for {site['name']} games.", body, "legal"))
+
+
+def site_privacy(site):
+    text = ("<p><strong>Privacy.</strong> This site sets no cookies and runs no analytics or ads. "
+            "Fonts and images are served from this site. Links to stores and other sites follow those sites' own policies.</p>")
+    if form_on(site):
+        text += ("<p><strong>Contact form.</strong> When you send the form, your name, email address and message are emailed "
+                 "to us so we can reply, and are kept only in our inbox. Nothing is stored on the website. The form uses "
+                 "Cloudflare Turnstile to stop spam, which loads a script from Cloudflare and checks your browser "
+                 "(<a href=\"https://www.cloudflare.com/privacypolicy/\">Cloudflare privacy policy</a>). "
+                 "Ask us any time to delete your messages.</p>")
+    else:
+        text += "<p>Nothing is loaded from other servers.</p>"
+    return text
 
 
 def build_404(site):

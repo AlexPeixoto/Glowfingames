@@ -1,0 +1,24 @@
+# Contact form Worker for the Glowfin Games website. See README.md in this folder.
+name = "glowfin-contact"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Serve it at glowfingames.com/api/contact (same site as the form, so no CORS).
+# Uncomment once the domain is on Cloudflare; until then use the workers.dev URL.
+# routes = [{ pattern = "glowfingames.com/api/contact", zone_name = "glowfingames.com" }]
+
+[vars]
+# FROM must be an address on the domain that has Email Routing turned on (it does not need to exist as a mailbox).
+FROM = "website@glowfingames.com"
+# Origins allowed to post the form (comma separated).
+ALLOWED_ORIGINS = "https://glowfingames.com,https://www.glowfingames.com,https://glowfingames.pages.dev,https://alexpeixoto.github.io"
+
+# TO: Alex's inbox. Must be a verified destination address in Email Routing, and the same as destination_address below.
+TO = "CHANGE_ME@gmail.com"
+
+[[send_email]]
+name = "MAILER"
+destination_address = "CHANGE_ME@gmail.com"
+
+# Secret, set with: npx wrangler secret put TURNSTILE_SECRET

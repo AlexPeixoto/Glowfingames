@@ -40,3 +40,36 @@
   }
   links.forEach((a, i) => a.addEventListener("click", (e) => { e.preventDefault(); open(i); }));
 })();
+
+// Contact form: posts to the contact Worker and shows the result in place.
+(function () {
+  const form = document.querySelector("form[data-contact]");
+  if (!form) return;
+  const status = form.querySelector(".form-status");
+  const button = form.querySelector("button[type=submit]");
+  const say = (text, cls) => { status.textContent = text; status.className = "form-status " + (cls || ""); };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    say("Sending…");
+    try {
+      const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        form.reset();
+        say("Thanks! Your message is on its way. We'll reply by email.", "ok");
+      } else if (data.error === "captcha") {
+        say("The spam check didn't pass. Please wait for it to finish and try again.", "err");
+      } else if (data.error === "fields") {
+        say("Please add a valid email address and a message.", "err");
+      } else {
+        say("Sorry, that didn't send. Please try again in a moment.", "err");
+      }
+    } catch {
+      say("Sorry, that didn't send. Check your connection and try again.", "err");
+    }
+    if (window.turnstile) window.turnstile.reset();
+    button.disabled = false;
+  });
+})();

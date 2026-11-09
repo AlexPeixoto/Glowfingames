@@ -11,7 +11,12 @@
     "email": "",
     "fallback_label": "Open a message on GitHub",
     "fallback_url": "https://github.com/AlexPeixoto/starkeel-privacy/issues",
-    "text": "Questions, bug reports, press or just saying hi: we read everything."
+    "text": "Questions, bug reports, press or just saying hi: we read everything.",
+    "form": {
+      "_doc": "Contact form, shown when both are set. endpoint = the contact Worker URL (worker/contact), turnstile_sitekey = the public Turnstile site key.",
+      "endpoint": "",
+      "turnstile_sitekey": ""
+    }
   },
   "site_url": "https://alexpeixoto.github.io/Glowfingames",
   "copyright": "Glowfin Games"
