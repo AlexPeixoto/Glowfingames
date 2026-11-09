@@ -23,10 +23,9 @@ Open `docs/index.html` in a browser to check it. All links are relative, so it w
 
 ## Deploying
 
-The site is live on **GitHub Pages** from this repo: Settings > Pages > Deploy from a branch > `main` / `/docs`. Pushing a rebuilt `docs/` to `main` publishes it within a minute. Address: https://alexpeixoto.github.io/Glowfingames/
+Live at **https://glowfingames.com** on **Cloudflare Pages** (free plan): the Pages project `glowfingames` builds from this repo's `main` with no build command and output directory `docs`, so pushing a rebuilt `docs/` to `main` publishes it within a minute or two. The domain is registered on Cloudflare. The contact form's Worker (`worker/contact`) is deployed the same way by Cloudflare Workers Builds (root directory `worker/contact`). The repo can be private; Cloudflare reads it through its GitHub app.
 
-- **Cloudflare Pages** (free, unlimited bandwidth, DDoS protection, never bills): connect this repo, framework "None", build command empty, output directory `docs`.
-- **Own domain**: set `"cname": "glowfingames.com"` (example) and `"site_url": "https://glowfingames.com"` in `site.json`, rebuild, then point the domain's DNS at the host. `site_url` is only used by the 404 page; while on github.io it is `https://alexpeixoto.github.io/Glowfingames`.
+`site_url` in `site.json` is the live address (used by the 404 page). `cname` is only for GitHub Pages and is not used.
 
 ## Brand
 
