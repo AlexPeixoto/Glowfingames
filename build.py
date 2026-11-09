@@ -238,10 +238,12 @@ def build_game(site, game):
         yid = esc(game["trailer_youtube_id"])
         title = esc(game["title"])
         poster = game.get("trailer_poster", "")
+        # Where the play button sits on the poster (0-100 % from the left), so it can avoid text.
+        play_x = float(game.get("trailer_play_x", 50))
         img = (f'<img src="{esc(poster)}" alt="{title} trailer" loading="lazy" width="1280" height="720">'
                if poster else "")
         trailer = f"""<section class="section"><div class="wrap"><p class="kicker">Trailer</p><h2>See it move</h2>
-<div class="video"><a class="video-facade" href="https://www.youtube.com/watch?v={yid}" data-youtube="{yid}" data-title="{title} trailer" aria-label="Play the {title} trailer">{img}<span class="play" aria-hidden="true"></span><span class="video-note">Plays from YouTube</span></a></div></div></section>"""
+<div class="video"><a class="video-facade" style="--play-x:{play_x:g}%" href="https://www.youtube.com/watch?v={yid}" data-youtube="{yid}" data-title="{title} trailer" aria-label="Play the {title} trailer">{img}<span class="play" aria-hidden="true"></span><span class="video-note">Plays from YouTube</span></a></div></div></section>"""
     privacy = ""
     if game.get("privacy"):
         privacy = f'<p class="small-links"><a href="privacy/index.html">Privacy policy</a> · <a href="{root}legal/index.html#{gid}">Credits</a></p>'

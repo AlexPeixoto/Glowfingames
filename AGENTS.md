@@ -33,7 +33,8 @@ Read README.md first. Rules:
    | `facts` | no | List of `{label, value}` rows (genre, platform, price, languages...) |
    | `icon`, `banner`, `hero`, `screenshots` | see 2 | Paths relative to the game folder; screenshots are `{src, alt}` (alt text is required for accessibility) |
    | `trailer_youtube_id` | no | YouTube trailer, click to play: nothing loads from YouTube until the visitor presses play, then the privacy-enhanced youtube-nocookie.com player; empty hides it |
-| `trailer_poster` | with trailer | 1280x720 WebP shown before play (the video's thumbnail) |
+| `trailer_poster` | with trailer | 1280x720 WebP shown before play (the video's YouTube thumbnail) |
+| `trailer_play_x` | no | Play button position, % from the left (default 50); move it off the thumbnail's text |
    | `stores` | yes | List of `{store, url, live}`. `store` is one of `google_play`, `app_store`, `steam`, `itch`, `web` (add more in `STORES` in build.py). `live: false` shows a greyed "Coming soon" button; set `live: true` when the store page is public |
    | `privacy` | no | File name of the privacy policy fragment (e.g. `privacy.html`); makes `games/<id>/privacy/` |
    | `privacy_updated` | with `privacy` | Date shown on the policy |
