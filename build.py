@@ -7,6 +7,7 @@ copies assets/ and each game's media/, and writes plain HTML pages with
 relative links, so the result works on GitHub Pages, any static host, a
 sub-path, or straight from disk. See README.md and AGENTS.md.
 """
+import hashlib
 import html
 import json
 import os
@@ -240,6 +241,10 @@ def build_game(site, game):
         poster = game.get("trailer_poster", "")
         # Where the play button sits on the poster (0-100 % from the left), so it can avoid text.
         play_x = float(game.get("trailer_play_x", 50))
+        if poster:
+            # Content hash in the URL so a replaced poster is never served from an old cache.
+            with open(os.path.join("games", gid, poster), "rb") as fh:
+                poster += "?v=" + hashlib.sha1(fh.read()).hexdigest()[:8]
         img = (f'<img src="{esc(poster)}" alt="{title} trailer" loading="lazy" width="1280" height="720">'
                if poster else "")
         trailer = f"""<section class="section"><div class="wrap"><p class="kicker">Trailer</p><h2>See it move</h2>
