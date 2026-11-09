@@ -11,6 +11,7 @@
 <link rel="icon" type="image/png" href="assets/brand/favicon.png">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -58,13 +59,24 @@
   </div>
 </section>
 <section id="contact" class="section contact">
-  <div class="wrap contact-in">
+  <div class="wrap contact-in has-form">
     <div>
       <p class="kicker">Contact</p>
       <h2>Say hello</h2>
       <p>Questions, bug reports, press or just saying hi: we read everything.</p>
     </div>
-    <div class="contact-card"><a class="btn" href="https://github.com/AlexPeixoto/starkeel-privacy/issues" rel="noopener">Open a message on GitHub</a></div>
+    <div class="contact-card"><form class="contact-form" action="https://glowfingames.com/api/contact" method="post" data-contact>
+  <div class="two">
+    <label>Name<input name="name" autocomplete="name" maxlength="100"></label>
+    <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+  </div>
+  <label>Subject<input name="subject" maxlength="150"></label>
+  <label>Message<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+  <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAF5zjyASUBGhfJ5C" data-theme="dark"></div>
+  <div class="row"><button class="btn" type="submit">Send message</button><p class="form-status" role="status" aria-live="polite"></p></div>
+  
+</form></div>
   </div>
 </section>
 </main>
