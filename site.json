@@ -1,5 +1,26 @@
 {
   "_doc": "Studio-wide text for the Glowfin Games website. Edit, then run: python3 build.py",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "short": "EN",
+      "hreflang": "en"
+    },
+    {
+      "code": "pt-br",
+      "name": "Português (Brasil)",
+      "short": "PT",
+      "hreflang": "pt-BR",
+      "countries": [
+        "BR"
+      ],
+      "accept": [
+        "pt"
+      ]
+    }
+  ],
+  "_languages_doc": "First = default, at the site root; others at /<code>/ with text in i18n/<code>.json. countries (CF-IPCountry codes) and accept (browser language prefixes) pick it for new visitors. See AGENTS.md > Languages.",
   "name": "Glowfin Games",
   "slogan": "Small games · Big glow",
   "intro": "Glowfin Games is a one-person indie studio in Ireland making small, bright games you can pick up with one hand and keep playing for months.",

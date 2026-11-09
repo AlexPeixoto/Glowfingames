@@ -28,6 +28,10 @@
     box.setAttribute("aria-modal", "true");
     box.innerHTML = '<img alt=""><button class="close" aria-label="Close">×</button>' +
       '<button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button>';
+    const d = document.body.dataset;
+    box.querySelector(".close").setAttribute("aria-label", d.lbClose || "Close");
+    box.querySelector(".prev").setAttribute("aria-label", d.lbPrev || "Previous");
+    box.querySelector(".next").setAttribute("aria-label", d.lbNext || "Next");
     box.addEventListener("click", (e) => {
       if (e.target.classList.contains("prev")) show(index - 1);
       else if (e.target.classList.contains("next")) show(index + 1);
@@ -48,26 +52,27 @@
   const status = form.querySelector(".form-status");
   const button = form.querySelector("button[type=submit]");
   const say = (text, cls) => { status.textContent = text; status.className = "form-status " + (cls || ""); };
+  const msg = form.dataset; // texts in the page's language, from build.py
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!form.reportValidity()) return;
     button.disabled = true;
-    say("Sending…");
+    say(msg.msgSending);
     try {
       const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         form.reset();
-        say("Thanks! Your message is on its way. We'll reply by email.", "ok");
+        say(msg.msgSent, "ok");
       } else if (data.error === "captcha") {
-        say("The spam check didn't pass. Please wait for it to finish and try again.", "err");
+        say(msg.msgErrCaptcha, "err");
       } else if (data.error === "fields") {
-        say("Please add a valid email address and a message.", "err");
+        say(msg.msgErrFields, "err");
       } else {
-        say("Sorry, that didn't send. Please try again in a moment.", "err");
+        say(msg.msgErrSend, "err");
       }
     } catch {
-      say("Sorry, that didn't send. Check your connection and try again.", "err");
+      say(msg.msgErrOffline, "err");
     }
     if (window.turnstile) window.turnstile.reset();
     button.disabled = false;
@@ -86,5 +91,16 @@
       f.allowFullscreen = true;
       a.replaceWith(f);
     });
+  });
+})();
+
+// Language menu: close it on a click outside or Esc. Picking a language is a plain link
+// (?lang=<code>), which the site's language Function remembers.
+(function () {
+  const menu = document.querySelector("details.lang");
+  if (!menu) return;
+  document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
   });
 })();

@@ -7,18 +7,26 @@
 <meta name="description" content="Glowfin Games is a one-person indie studio in Ireland making small, bright games you can pick up with one hand and keep playing for months.">
 <meta property="og:title" content="Glowfin Games">
 <meta property="og:description" content="Glowfin Games is a one-person indie studio in Ireland making small, bright games you can pick up with one hand and keep playing for months.">
+<meta property="og:locale" content="en">
 <meta name="theme-color" content="#030817">
+<link rel="canonical" href="https://glowfingames.com/">
+<link rel="alternate" hreflang="en" href="https://glowfingames.com/">
+<link rel="alternate" hreflang="pt-BR" href="https://glowfingames.com/pt-br/">
+<link rel="alternate" hreflang="x-default" href="https://glowfingames.com/">
 <link rel="icon" type="image/png" href="assets/brand/favicon.png">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<body>
+<body data-lb-close="Close" data-lb-prev="Previous" data-lb-next="Next">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-in">
     <a class="brand" href="index.html"><img src="assets/brand/glowfin-fish.png" alt="" width="54" height="26"><span>Glowfin<b>Games</b></span></a>
-    <nav><a href="index.html#games">Games</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a href="legal/index.html">Legal</a></nav>
+    <div class="top-right">
+      <nav><a href="index.html#games">Games</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><a href="legal/index.html">Legal</a></nav>
+      <details class="lang"><summary aria-label="Language: English" title="Language"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>EN</span></summary><ul><li><a href="index.html?lang=en" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li><li><a href="pt-br/index.html?lang=pt-br" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li></ul></details>
+    </div>
   </div>
 </header>
 <main id="main">
@@ -65,7 +73,7 @@
       <h2>Say hello</h2>
       <p>Questions, bug reports, press or just saying hi: we read everything.</p>
     </div>
-    <div class="contact-card"><form class="contact-form" action="https://glowfingames.com/api/contact" method="post" data-contact>
+    <div class="contact-card"><form class="contact-form" action="https://glowfingames.com/api/contact" method="post" data-contact data-msg-sending="Sending…" data-msg-sent="Thanks! Your message is on its way. We&#x27;ll reply by email." data-msg-err-captcha="The spam check didn&#x27;t pass. Please wait for it to finish and try again." data-msg-err-fields="Please add a valid email address and a message." data-msg-err-send="Sorry, that didn&#x27;t send. Please try again in a moment." data-msg-err-offline="Sorry, that didn&#x27;t send. Check your connection and try again.">
   <div class="two">
     <label>Name<input name="name" autocomplete="name" maxlength="100"></label>
     <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
@@ -73,7 +81,7 @@
   <label>Subject<input name="subject" maxlength="150"></label>
   <label>Message<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
   <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAAF5zjyASUBGhfJ5C" data-theme="dark"></div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAF5zjyASUBGhfJ5C" data-theme="dark" data-language="en"></div>
   <div class="row"><button class="btn" type="submit">Send message</button><p class="form-status" role="status" aria-live="polite"></p></div>
   
 </form></div>

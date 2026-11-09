@@ -1,0 +1,47 @@
+{
+  "_doc": "STARKEEL in Brazilian Portuguese: replaces these fields of ../game.json on the /pt-br/ pages. Terms match the game (locale/strings.csv) and the pt-BR store listing (AndroidProto publishing/pt-BR). See AGENTS.md > Languages.",
+  "tagline": "Fácil de jogar. Desvie, colete, faça combos.",
+  "status": "Em breve no Google Play",
+  "summary": "Um shooter espacial roguelite fácil de controlar com uma mão. Sua nave atira sozinha: arraste para desviar, combine armas em combos e enfrente 39 chefes em nove setores.",
+  "description": [
+    "Pilote uma nave-lanterna por nove setores criados à mão e enfrente 39 chefes.",
+    "STARKEEL é um shooter espacial vertical feito para celular. Sua nave atira sozinha. Arraste o dedo em qualquer ponto da tela para se mover, assim o dedo nunca cobre a nave, e desvie das balas laranja enquanto sua build fica mais forte. Uma build forte quase joga sozinha."
+  ],
+  "features": [
+    {"title": "Fácil de aprender", "text": "Arraste em qualquer lugar para pilotar, o tiro é automático. Só o pontinho no centro da nave pode ser atingido, e cada inimigo sempre se move e atira do mesmo jeito, então você aprende um padrão uma vez só."},
+    {"title": "Combos Crosslink", "text": "Cada arma deixa a própria marca. Acerte um inimigo marcado com outra arma e as duas formam um combo. 14 armas, 10 lentes e 15 pares para descobrir."},
+    {"title": "Nove setores, 39 chefes", "text": "Cada setor tem visual, música, inimigos e perigos próprios, dois chefes intermediários e um chefe do setor com vários atos. Escolha uma rota e encontre os chefes bônus escondidos."},
+    {"title": "A Oficina", "text": "Traga sucata e núcleos de volta para liberar naves, pilotos, peças e pesquisas entre as corridas. Ganhe estrelas para abrir os próximos setores."},
+    {"title": "Feito para jogar de novo", "text": "Um layout novo a cada corrida, mais os modos Infinito, Maratona, Corrida de Chefes, Semente Diária e Desafio Semanal, modificadores de Calor e 58 troféus."},
+    {"title": "Grátis para experimentar", "text": "O tutorial e os dois primeiros setores são grátis. Uma única compra desbloqueia o jogo completo, e seu progresso continua. Sem anúncios, funciona offline."}
+  ],
+  "facts": [
+    {"label": "Gênero", "value": "Shooter vertical, roguelite"},
+    {"label": "Plataforma", "value": "Android"},
+    {"label": "Preço", "value": "Grátis para experimentar, compra única"},
+    {"label": "Idiomas", "value": "Inglês, português (Brasil), espanhol, francês, italiano, alemão"},
+    {"label": "Funciona", "value": "Offline, sem anúncios"}
+  ],
+  "banner": "media/pt-br/banner.webp",
+  "screenshots": [
+    {"src": "media/pt-br/phone-01_one_thumb.webp", "alt": "Arraste em qualquer lugar para desviar enquanto a nave atira sozinha"},
+    {"src": "media/pt-br/phone-02_crosslinks.webp", "alt": "Duas armas no mesmo inimigo formam um combo Crosslink"},
+    {"src": "media/pt-br/phone-03_cards.webp", "alt": "Escolha uma de três cartas de melhoria ao subir de nível"},
+    {"src": "media/pt-br/phone-04_bosses.webp", "alt": "Luta contra chefe com vários atos"},
+    {"src": "media/pt-br/phone-05_sectors.webp", "alt": "Nove setores temáticos para desbloquear"},
+    {"src": "media/pt-br/phone-06_workshop.webp", "alt": "A Oficina entre as corridas"},
+    {"src": "media/pt-br/phone-07_modes.webp", "alt": "Infinito, Maratona, Corrida de Chefes e outros modos"},
+    {"src": "media/pt-br/phone-08_free_to_try.webp", "alt": "Grátis para experimentar, uma compra desbloqueia o jogo completo"}
+  ],
+  "privacy": "privacy.pt-br.html",
+  "privacy_updated": "8 de novembro de 2026",
+  "credits": [
+    {"what": "Motor do jogo", "who": "Godot Engine 4.7 (godotengine.org) e suas bibliotecas de terceiros", "licence": "MIT e outras, textos completos na tela de Créditos do jogo"},
+    {"what": "Fonte", "who": "Open Sans, The Open Sans Project", "licence": "SIL Open Font License 1.1"},
+    {"what": "Efeitos sonoros", "who": "Kenney (kenney.nl), Sci-Fi Sounds e Interface Sounds", "licence": "CC0 1.0"},
+    {"what": "Música e alguns efeitos sonoros", "who": "Feitos com ElevenLabs em um plano pago", "licence": "Licenciados para uso comercial"},
+    {"what": "Modelos da nave, dos inimigos e dos chefes", "who": "Feitos com Meshy em um plano pago, repintados e renderizados pela Glowfin Games", "licence": "Propriedade da Glowfin Games"},
+    {"what": "Logo do Godot (tela de Créditos)", "who": "Andrea Calabró", "licence": "CC BY 4.0"},
+    {"what": "Plugin do Google Play Games (versão Play)", "who": "GodotPlayGameServices, de Jacob Ibáñez Sánchez", "licence": "MIT"}
+  ]
+}
