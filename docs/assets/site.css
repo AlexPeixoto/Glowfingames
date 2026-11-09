@@ -236,3 +236,6 @@ tr:last-child td { border-bottom: 0; }
 }
 
 .note { font-size: .92rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 12px; }
+
+/* Justified body text (Alex). Hyphenation follows <html lang>, so narrow phone columns don't get wide gaps. */
+.prose p, .prose li, .features p, .game-card-body > p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 7 3 3; text-wrap: pretty; }
