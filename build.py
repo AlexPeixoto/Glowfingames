@@ -206,6 +206,10 @@ class Ctx:
         return esc(PLACEHOLDER.sub(lambda m: str(values[m.group(1)]), text))
 
     def media(self, game, path):
+        """A game image's URL, with a content hash so a replaced image is never served from an old cache."""
+        if "?" not in path:
+            with open(os.path.join(GAMES, game["id"], html.unescape(path)), "rb") as fh:
+                path += "?v=" + hashlib.sha1(fh.read()).hexdigest()[:8]
         return f'{self.base}games/{game["id"]}/{path}'
 
 
