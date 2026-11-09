@@ -15,10 +15,10 @@ FROM = "website@glowfingames.com"
 ALLOWED_ORIGINS = "https://glowfingames.com,https://www.glowfingames.com,https://glowfingames.pages.dev,https://alexpeixoto.github.io"
 
 # TO: Alex's inbox. Must be a verified destination address in Email Routing, and the same as destination_address below.
-TO = "CHANGE_ME@gmail.com"
+TO = "glowfingames@gmail.com"
 
 [[send_email]]
 name = "MAILER"
-destination_address = "CHANGE_ME@gmail.com"
+destination_address = "glowfingames@gmail.com"
 
 # Secret, set with: npx wrangler secret put TURNSTILE_SECRET
