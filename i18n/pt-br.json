@@ -1,7 +1,7 @@
 {
   "_doc": "Website text in Brazilian Portuguese. \"site\" replaces the matching text in site.json; \"ui\" has the same keys as i18n/en.json. See AGENTS.md > Languages.",
   "site": {
-    "slogan": "Jogos pequenos · Muito brilho",
+    "slogan": "Pequenos jogos · Grandes ideias",
     "intro": "A Glowfin Games é um estúdio indie de uma pessoa só, na Irlanda, que faz jogos pequenos e coloridos para jogar com uma mão e continuar jogando por meses.",
     "about": [
       "Fazemos jogos fáceis de começar e difíceis de dominar: regras claras, telas fáceis de ler e builds que deixam os jogadores mais espertos quebrar o jogo.",
@@ -26,7 +26,7 @@
     "games_kicker": "Jogos",
     "games_title": "O que fazemos",
     "about_kicker": "Sobre",
-    "about_title": "Jogos pequenos, muito brilho",
+    "about_title": "Pequenos jogos, grandes ideias",
     "card_artwork_alt": "Arte de {title}",
     "card_see": "Conheça o jogo",
 
