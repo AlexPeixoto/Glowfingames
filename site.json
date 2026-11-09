@@ -1,0 +1,18 @@
+{
+  "_doc": "Studio-wide text for the Glowfin Games website. Edit, then run: python3 build.py",
+  "name": "Glowfin Games",
+  "slogan": "Small games · Big glow",
+  "intro": "Glowfin Games is a one-person indie studio in Ireland making small, bright games you can pick up with one hand and keep playing for months.",
+  "about": [
+    "We make games that are easy to start and deep to master: clear rules, readable screens, and builds that let clever players break them wide open.",
+    "Every game is made to respect your time. No ads, no energy timers, no subscriptions. Try it for free, and pay once if you want the rest."
+  ],
+  "contact": {
+    "email": "",
+    "fallback_label": "Open a message on GitHub",
+    "fallback_url": "https://github.com/AlexPeixoto/starkeel-privacy/issues",
+    "text": "Questions, bug reports, press or just saying hi: we read everything."
+  },
+  "site_url": "https://alexpeixoto.github.io/Glowfingames",
+  "copyright": "Glowfin Games"
+}

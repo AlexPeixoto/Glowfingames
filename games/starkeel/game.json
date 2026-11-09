@@ -1,0 +1,57 @@
+{
+  "_doc": "One game on the Glowfin Games website. Field guide: ./AGENTS.md. After editing run: python3 build.py",
+  "id": "starkeel",
+  "order": 1,
+  "title": "STARKEEL",
+  "tagline": "One thumb. Auto-fire. Link the fire.",
+  "status": "Coming soon to Google Play",
+  "accent": "#4fd6ff",
+  "summary": "A one-thumb space shooter for phones. Your ship fires on its own: drag to dodge, link weapons into combos and take on 39 bosses across nine sectors.",
+  "description": [
+    "Fly a lantern ship through nine hand-built sectors, one thumb at a time.",
+    "STARKEEL is a vertical space shooter made for phones. Your ship fires on its own. You drag anywhere on the screen to move, so your thumb never covers the ship, and you dodge orange bullets while your build grows. Strong builds can almost play themselves."
+  ],
+  "features": [
+    {"title": "Easy to pick up", "text": "Drag anywhere to steer, firing is automatic. Only the small dot in the middle of your ship can be hit, and every enemy always moves and shoots the same way, so you learn a pattern once."},
+    {"title": "Crosslink combos", "text": "Each weapon leaves its own mark. Hit a marked enemy with a different weapon and the two combine into a combo. 14 weapons, 10 lenses and 15 pairings to discover."},
+    {"title": "Nine sectors, 39 bosses", "text": "Each sector has its own look, music, enemies and hazards, two mid-bosses and a sector boss with several acts. Pick a route and find the hidden bonus bosses."},
+    {"title": "The Workshop", "text": "Bring back scrap and cores to unlock hulls, pilots, parts and research between runs. Earn stars to open the next sectors."},
+    {"title": "Made to replay", "text": "A fresh layout every run, plus Endless, Gauntlet, Boss Rush, Daily Seed and Weekly Challenge modes, Heat mutators and 58 trophies."},
+    {"title": "Free to try", "text": "The tutorial and the first two sectors are free. One purchase unlocks the full game and your progress carries over. No ads, plays offline."}
+  ],
+  "facts": [
+    {"label": "Genre", "value": "Vertical shooter, roguelite"},
+    {"label": "Platform", "value": "Android"},
+    {"label": "Price", "value": "Free to try, one-time unlock"},
+    {"label": "Languages", "value": "English, Português (Brasil), Español, Français, Italiano, Deutsch"},
+    {"label": "Plays", "value": "Offline, no ads"}
+  ],
+  "icon": "media/icon.webp",
+  "banner": "media/banner.webp",
+  "hero": "media/hero.webp",
+  "screenshots": [
+    {"src": "media/phone-01_one_thumb.webp", "alt": "Drag anywhere to dodge while the ship fires on its own"},
+    {"src": "media/phone-02_crosslinks.webp", "alt": "Two weapons on one enemy make a Crosslink combo"},
+    {"src": "media/phone-03_cards.webp", "alt": "Pick one of three upgrade cards on level up"},
+    {"src": "media/phone-04_bosses.webp", "alt": "Boss fight with several acts"},
+    {"src": "media/phone-05_sectors.webp", "alt": "Nine themed sectors to unlock"},
+    {"src": "media/phone-06_workshop.webp", "alt": "The Workshop between runs"},
+    {"src": "media/phone-07_modes.webp", "alt": "Endless, Gauntlet, Boss Rush and more modes"},
+    {"src": "media/phone-08_free_to_try.webp", "alt": "Free to try, one purchase unlocks the full game"}
+  ],
+  "trailer_youtube_id": "",
+  "stores": [
+    {"store": "google_play", "url": "https://play.google.com/store/apps/details?id=com.alexpeixoto.starkeel", "live": false}
+  ],
+  "privacy": "privacy.html",
+  "privacy_updated": "8 November 2026",
+  "credits": [
+    {"what": "Game engine", "who": "Godot Engine 4.7 (godotengine.org) and its third-party libraries", "licence": "MIT and others, full texts in the game's Credits screen"},
+    {"what": "Font", "who": "Open Sans, The Open Sans Project", "licence": "SIL Open Font License 1.1"},
+    {"what": "Sound effects", "who": "Kenney (kenney.nl), Sci-Fi Sounds and Interface Sounds", "licence": "CC0 1.0"},
+    {"what": "Music and some sound effects", "who": "Made with ElevenLabs on a paid plan", "licence": "Licensed for commercial use"},
+    {"what": "Ship, enemy and boss models", "who": "Made with Meshy on a paid plan, repainted and rendered by Glowfin Games", "licence": "Owned by Glowfin Games"},
+    {"what": "Godot logo (Credits screen)", "who": "Andrea Calabró", "licence": "CC BY 4.0"},
+    {"what": "Google Play Games plugin (Play version)", "who": "GodotPlayGameServices by Jacob Ibáñez Sánchez", "licence": "MIT"}
+  ]
+}
