@@ -67,11 +67,20 @@ p { margin: 0 0 1em; }
 .slogan { font-family: var(--pixel); color: var(--cyan); font-size: clamp(1rem, 2.6vw, 1.3rem); letter-spacing: .2em; text-transform: uppercase; }
 .lead { max-width: 620px; margin: 0 auto 28px; color: var(--muted); font-size: 1.1rem; }
 .bubbles i { opacity: 0; animation-fill-mode: backwards; position: absolute; bottom: -30px; width: 14px; height: 14px; border: 3px solid rgba(79, 214, 255, .5); border-radius: 4px; animation: rise 12s linear infinite; }
-.bubbles i:nth-child(1) { left: 12%; animation-delay: 0s; }
-.bubbles i:nth-child(2) { left: 28%; width: 10px; height: 10px; animation-delay: 3s; animation-duration: 15s; }
-.bubbles i:nth-child(3) { left: 72%; animation-delay: 6s; }
-.bubbles i:nth-child(4) { left: 86%; width: 20px; height: 20px; animation-delay: 1.5s; animation-duration: 17s; }
-.bubbles i:nth-child(5) { left: 58%; width: 8px; height: 8px; animation-delay: 8s; }
+.bubbles i:nth-child(1) { left: 12%; animation-delay: -5s; }
+.bubbles i:nth-child(2) { left: 28%; width: 10px; height: 10px; animation-delay: -3s; animation-duration: 15s; }
+.bubbles i:nth-child(3) { left: 72%; animation-delay: -6s; }
+.bubbles i:nth-child(4) { left: 86%; width: 20px; height: 20px; animation-delay: -1.5s; animation-duration: 17s; }
+.bubbles i:nth-child(5) { left: 58%; width: 8px; height: 8px; animation-delay: -8s; }
+.bubbles i:nth-child(6) { left: 5%; width: 9px; height: 9px; animation-delay: -4.5s; animation-duration: 11s; }
+.bubbles i:nth-child(7) { left: 20%; width: 18px; height: 18px; animation-delay: -9s; animation-duration: 16s; }
+.bubbles i:nth-child(8) { left: 36%; width: 7px; height: 7px; border-width: 2px; animation-delay: -2s; animation-duration: 10s; }
+.bubbles i:nth-child(9) { left: 44%; width: 12px; height: 12px; animation-delay: -6.5s; animation-duration: 14s; }
+.bubbles i:nth-child(10) { left: 65%; width: 16px; height: 16px; animation-delay: -11s; animation-duration: 13s; }
+.bubbles i:nth-child(11) { left: 79%; width: 8px; height: 8px; border-width: 2px; animation-delay: -4s; animation-duration: 9s; }
+.bubbles i:nth-child(12) { left: 93%; width: 11px; height: 11px; animation-delay: -7.5s; animation-duration: 12s; }
+.bubbles i:nth-child(13) { left: 51%; width: 22px; height: 22px; animation-delay: -13s; animation-duration: 18s; }
+.bubbles i:nth-child(14) { left: 25%; width: 6px; height: 6px; border-width: 2px; animation-delay: -10s; animation-duration: 8s; }
 @keyframes float { 50% { transform: translateY(-10px); } }
 @keyframes rise { from { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } to { transform: translateY(-110vh); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .hero-logo, .bubbles i { animation: none; } .bubbles { display: none; } html { scroll-behavior: auto; } }

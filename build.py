@@ -198,7 +198,7 @@ def build_home(site, games):
     <p class="lead">{esc(site["intro"])}</p>
     <div class="row center"><a class="btn" href="#games">Our games</a><a class="btn ghost" href="#contact">Get in touch</a></div>
   </div>
-  <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </section>
 <section id="games" class="section">
   <div class="wrap">
