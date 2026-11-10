@@ -23,7 +23,7 @@
     {"label": "Genre", "value": "Vertical shooter, roguelite"},
     {"label": "Platform", "value": "Android"},
     {"label": "Price", "value": "Free to try, one-time unlock"},
-    {"label": "Languages", "value": "English, Português (Brasil), Español, Français, Italiano, Deutsch"},
+    {"label": "Languages", "value": "English, Português (Brasil)"},
     {"label": "Plays", "value": "Offline, no ads"}
   ],
   "icon": "media/icon.webp",

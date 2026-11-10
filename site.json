@@ -25,14 +25,14 @@
   "slogan": "Small games · Big glow",
   "intro": "Glowfin Games is a one-person indie studio in Ireland making small, bright games you can pick up with one hand and keep playing for months.",
   "about": [
-    "We make games that are easy to start and deep to master: clear rules, readable screens, and builds that let clever players break them wide open.",
-    "Every game is made to respect your time. No ads, no energy timers, no subscriptions. Try it for free, and pay once if you want the rest."
+    "We make games that are quick to learn and give you plenty to work out: clear rules, readable screens, and builds that clever players can push very far.",
+    "No ads, no energy timers, no subscriptions. Try it for free, and pay once if you want the rest."
   ],
   "contact": {
     "email": "",
     "fallback_label": "Open a message on GitHub",
     "fallback_url": "https://github.com/AlexPeixoto/starkeel-privacy/issues",
-    "text": "Questions, bug reports, press or just saying hi: we read everything.",
+    "text": "Questions, bug reports, press or just saying hi: send us a message.",
     "form": {
       "_doc": "Contact form, shown when both are set. endpoint = the contact Worker URL (worker/contact), turnstile_sitekey = the public Turnstile site key.",
       "endpoint": "https://glowfingames.com/api/contact",

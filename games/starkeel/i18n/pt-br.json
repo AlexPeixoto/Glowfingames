@@ -19,7 +19,7 @@
     {"label": "Gênero", "value": "Shooter vertical, roguelite"},
     {"label": "Plataforma", "value": "Android"},
     {"label": "Preço", "value": "Grátis para experimentar, compra única"},
-    {"label": "Idiomas", "value": "Inglês, português (Brasil), espanhol, francês, italiano, alemão"},
+    {"label": "Idiomas", "value": "Inglês, português (Brasil)"},
     {"label": "Funciona", "value": "Offline, sem anúncios"}
   ],
   "banner": "media/pt-br/banner.webp",

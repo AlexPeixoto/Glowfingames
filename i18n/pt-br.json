@@ -4,11 +4,11 @@
     "slogan": "Pequenos jogos · Grandes ideias",
     "intro": "A Glowfin Games é um estúdio indie de uma pessoa só, na Irlanda, que faz jogos pequenos e coloridos para jogar com uma mão e continuar jogando por meses.",
     "about": [
-      "Fazemos jogos fáceis de começar e difíceis de dominar: regras claras, telas fáceis de ler e builds que deixam os jogadores mais espertos quebrar o jogo.",
-      "Todo jogo é feito para respeitar o seu tempo. Sem anúncios, sem espera por energia, sem assinaturas. Experimente de graça e pague uma vez só se quiser o resto."
+      "Fazemos jogos rápidos de aprender e com muito para descobrir: regras claras, telas fáceis de ler e builds que os jogadores mais espertos conseguem levar muito longe.",
+      "Sem anúncios, sem espera por energia, sem assinaturas. Experimente de graça e pague uma vez só se quiser o resto."
     ],
     "contact": {
-      "text": "Dúvidas, bugs, imprensa ou só um oi: lemos tudo.",
+      "text": "Dúvidas, bugs, imprensa ou só um oi: mande uma mensagem.",
       "fallback_label": "Envie uma mensagem pelo GitHub"
     }
   },
