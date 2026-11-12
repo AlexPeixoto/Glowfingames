@@ -23,6 +23,8 @@
     {"label": "Funciona", "value": "Offline, sem anúncios"}
   ],
   "banner": "media/pt-br/banner.webp",
+  "trailer_youtube_id": "w_iVfuD0KwQ",
+  "trailer_poster": "media/pt-br/trailer.webp",
   "screenshots": [
     {"src": "media/pt-br/phone-01_one_thumb.webp", "alt": "Arraste em qualquer lugar para desviar enquanto a nave atira sozinha"},
     {"src": "media/pt-br/phone-02_crosslinks.webp", "alt": "Duas armas no mesmo inimigo formam um combo Crosslink"},
