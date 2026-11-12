@@ -1,6 +1,6 @@
 {
   "_doc": "STARKEEL in Brazilian Portuguese: replaces these fields of ../game.json on the /pt-br/ pages. Terms match the game (locale/strings.csv) and the pt-BR store listing (AndroidProto publishing/pt-BR). See AGENTS.md > Languages.",
-  "tagline": "Fácil de jogar. Desvie, colete, faça combos.",
+  "tagline": "Simples de jogar, difícil de largar.",
   "status": "Em breve no Google Play",
   "summary": "Um shooter espacial roguelite fácil de controlar com uma mão. Sua nave atira sozinha: arraste para desviar, combine armas em combos e enfrente 39 chefes em nove setores.",
   "description": [
