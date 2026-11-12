@@ -11,8 +11,8 @@
     {"title": "Fácil de aprender", "text": "Arraste em qualquer lugar para pilotar, o tiro é automático. Só o pontinho no centro da nave pode ser atingido, e cada inimigo sempre se move e atira do mesmo jeito, então você aprende um padrão uma vez só."},
     {"title": "Combos Crosslink", "text": "Cada arma deixa a própria marca. Acerte um inimigo marcado com outra arma e as duas formam um combo. 14 armas, 10 lentes e 15 pares para descobrir."},
     {"title": "Nove setores, 39 chefes", "text": "Cada setor tem visual, música, inimigos e perigos próprios, dois chefes intermediários e um chefe do setor com vários atos. Escolha uma rota e encontre os chefes bônus escondidos."},
-    {"title": "A Oficina", "text": "Traga sucata e núcleos de volta para liberar naves, pilotos, peças e pesquisas entre as corridas. Ganhe estrelas para abrir os próximos setores."},
-    {"title": "Feito para jogar de novo", "text": "Um layout novo a cada corrida, mais os modos Infinito, Maratona, Corrida de Chefes, Semente Diária e Desafio Semanal, modificadores de Calor e 58 troféus."},
+    {"title": "A Oficina", "text": "Traga sucata e núcleos de volta para liberar naves, pilotos, peças e pesquisas entre as partidas. Ganhe estrelas para abrir os próximos setores."},
+    {"title": "Feito para jogar de novo", "text": "Um layout novo a cada partida, mais os modos Infinito, Maratona, Corrida de Chefes, Semente Diária e Desafio Semanal, modificadores de Calor e 58 troféus."},
     {"title": "Grátis para experimentar", "text": "O tutorial e os dois primeiros setores são grátis. Uma única compra desbloqueia o jogo completo, e seu progresso continua. Sem anúncios, funciona offline."}
   ],
   "facts": [
@@ -31,7 +31,7 @@
     {"src": "media/pt-br/phone-03_cards.webp", "alt": "Escolha uma de três cartas de melhoria ao subir de nível"},
     {"src": "media/pt-br/phone-04_bosses.webp", "alt": "Luta contra chefe com vários atos"},
     {"src": "media/pt-br/phone-05_sectors.webp", "alt": "Nove setores temáticos para desbloquear"},
-    {"src": "media/pt-br/phone-06_workshop.webp", "alt": "A Oficina entre as corridas"},
+    {"src": "media/pt-br/phone-06_workshop.webp", "alt": "A Oficina entre as partidas"},
     {"src": "media/pt-br/phone-07_modes.webp", "alt": "Infinito, Maratona, Corrida de Chefes e outros modos"},
     {"src": "media/pt-br/phone-08_free_to_try.webp", "alt": "Grátis para experimentar, uma compra desbloqueia o jogo completo"}
   ],
